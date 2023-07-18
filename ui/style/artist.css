@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(10, 10, 10);
+    align-items: center;
+}
+h1,h2,h3,p{
+  color: aliceblue;
+}
+.cont-band-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.band-card {
+  text-align: center;
+  align-items: center;
+  }
+  
+.band-image {
+    border-radius: 100%;
+
+}
+  
+.band-info {
+    padding: 20px;
+    box-sizing: border-box;
+}
+  
+.band-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.band-members h2 {
+    margin-top: 0;
+}
+  
+.band-details h2 {
+    margin-top: 20px;
+}
+.list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.date{
+  margin-left: 10px;
+}
+.btn--subscribe{
+  background-color: rgb(20, 20, 20);
+  border-color: gray;
+  border: 1px solid;
+  color: aliceblue;
+}
+.btn--subscribe:active{
+  background-color: grey;
+}

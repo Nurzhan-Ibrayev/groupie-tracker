@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/style/artist.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist</title>
+</head>
+<body>
+  <header> <h1 class="band-name">{{.ResponseOneArist.Name}}</h1></header>
+    <div class="band-card">
+  
+        <img src="{{.ResponseOneArist.Image}}" class="band-image">
+      
+      <div class="band-info">
+       
+          <h2>Creation date:</h2><p>{{.ResponseOneArist.CreationDate}}</p>
+          <h2>First album:</h2> <p>{{.ResponseOneArist.FirstAlbum}}</p>
+          <div class="band-members">
+              <h2>Members:</h2>
+              
+                  {{range .ResponseOneArist.Members}}
+                  <p>{{.}}</p>
+                  {{end}}
+              
+            </div>
+           
+            <h2>Upcoming dates and locations:</h2>
+
+                {{range $index, $elem:= .ResponseRelation.DatesLocations}}
+                <div class = "list">
+                  <h3>{{$index}}:</h3> 
+                  {{range $elem}}
+                    <p class="date">{{.}}</p>
+              
+                  {{end}}
+                </div>
+                {{end}}
+  
+          </div>
+         
+          <form action="/" method="get">
+            <button class="btn--subscribe" type="submit">Go Back</button>
+        </form>
+        
+      </div>
+     
+</body>
+</html>
